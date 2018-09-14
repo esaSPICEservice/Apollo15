@@ -1,0 +1,60 @@
+KPL/IK
+
+Apollo 15 X-Ray Instrument Kernel
+========================================================================
+
+   This Apollo 15 SPICE instrument kernel (I-kernel)
+   contains the instrument geometric parameters for the X-Ray instrument
+
+
+Version and Date
+--------------------------------------------------------
+
+   Version 1.0 -- September 06, 2018 - Alfredo Escalante
+   
+ 
+Contact Information
+--------------------------------------------------------
+
+
+References
+--------------------------------------------------------
+   
+   1. APOLLO 15 SIM BAY PHOTOGRAPHIC EQUIPMENT AND MISSION SUMMARY
+         Prepared by Mapping Sciences Branch, NASA Manned Spacecraft
+         Center, Houston, Texas, August, 1971.
+ 
+
+Instrument Overview
+--------------------------------------------------------
+
+
+
+FOV Definition
+---------------------------------------------------------------------------
+
+      \begindata
+
+         INS-915250_FOV_FRAME                 = 'A15_XRAY'
+         INS-915250_FOV_SHAPE                 = 'RECTANGLE'
+         INS-915250_BORESIGHT                 = ( 0.0 0.0 +1.0 )
+         INS-915250_FOV_CLASS_SPEC            = 'ANGLES'
+         INS-915250_FOV_REF_VECTOR            = ( +1.0 0.0 0.0 )
+         INS-915250_FOV_REF_ANGLE             = ( 15 )
+         INS-915250_FOV_CROSS_ANGLE           = ( 15 )
+         INS-915250_FOV_ANGLE_UNITS           = 'DEGREES'
+
+      \begintext
+
+Platform ID
+---------------------------------------------------------------------------
+
+   This number is the NAIF instrument ID of the platform on which the
+   camera is mounted.
+
+      \begindata
+
+      INS-915250_PLATFORM_ID  = ( -915000 )
+
+      \begintext
+

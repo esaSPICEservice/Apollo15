@@ -1,0 +1,129 @@
+KPL/IK
+
+Apollo 15 Panoramic Instrument Kernel
+========================================================================
+
+   This Apollo 15 SPICE instrument kernel (I-kernel)
+   contains the instrument geometric parameters for the Panoramic camera
+   
+
+Version and Date
+--------------------------------------------------------
+ 
+   Version 2.0 -- September, 12, 2018 - Alfredo Escalante
+         - Correction of the Boresight vector, it was (0,0,0) and 
+		   it should be (0,0,+1)
+		   
+   Version 1.0 -- November 15, 2006 - Jacob Danton
+ 
+ 
+Contact Information
+--------------------------------------------------------
+
+
+References
+--------------------------------------------------------
+ 
+   1. Apollo 15 Index: Mapping Camera and Panoramic Camera Photographs
+       (http://apollo.sese.asu.edu/SUPPORT_DATA/ap15_sim_index.pdf)
+        
+   2. Photographic Systems for Apollo
+   
+   3. Wu and Moore. "Experimental Photogrammetry of Lunar Images"
+       (http://ser.sese.asu.edu/APOLLO/RESOURCES/Wu1980_ExpPhotogrammetry.pdf)
+ 
+
+Instrument Overview
+--------------------------------------------------------
+
+
+Optical Parameters
+--------------------------------------------------------
+
+      -------------------------------------------------
+             parameter                     value
+      -------------------------------------------------
+      Focal Length, mm                     609.752 ( Wu D4)
+      f/ratio                               3.5
+      FOV Angular Size, deg               108 x 10.767
+      IFOV, deg/pixel                      0.0000081508
+      -------------------------------------------------
+   
+   The values in the keywords are given in the same units as in the
+   table above except for angles which are given in radians.
+
+      \begindata
+
+         INS-915230_FOCAL_LENGTH       = ( 609.752 )
+         INS-915230_F/RATIO            = ( 3.5 )
+         INS-915230_FOV_ANGULAR_SIZE   = ( 1.8834,  0.18752)
+         INS-915230_IFOV               = ( 0.0000081508, 0.0000081508 )
+
+      \begintext
+
+Detector Parameters
+--------------------------------------------------------
+
+      -----------------------------------------------
+             parameter                    value
+      -----------------------------------------------
+      Pixel size, microns                   4.9681
+      Number of pixels/mm                  201.28
+
+      Detector Size (physical)        23007 x 231073 [11.43 cm x 114.8 cm]
+      Detector Array Center          11503.5, 115537.5 [no offset]
+      -----------------------------------------------
+
+   The values in the keywords are given in the same units as in the
+   table above.
+
+      \begindata
+         
+         INS-915230_PIXEL_SIZE         = ( 4.9865 )
+         INS-915230_PIXEL_PITCH        = ( 0.0049865 )
+         INS-915230_K                  = ( 200.54 )
+         INS-915230_PIXEL_SAMPLES      = ( 239339 )
+         INS-915230_PIXEL_LINES        = ( 25554 )
+         INS-915230_CCD_CENTER         = ( 11557, 0 )
+         
+         INS-915230_TRANSX = ( 0.0, 0.0049865, 0.0)
+         INS-915230_TRANSY = ( 0.0, 0.0, 0.0049865)
+         
+         INS-915230_ITRANSS = ( 0.0, 200.54, 0.0)
+         INS-915230_ITRANSL = ( 0.0, 0.0, 200.54)
+
+         INS-915230_OD_K = ( 0.0 )
+
+      \begintext
+
+
+FOV Definition
+---------------------------------------------------------------------------
+
+   This Boresight Line & Sample is relative to the scanned pan recieved from JSC
+	I.E. Sideways.
+
+      \begindata
+
+         INS-915230_FOV_FRAME                 = 'A15_PANORAMIC'
+         INS-915230_FOV_SHAPE                 = 'RECTANGLE'
+         INS-915230_BORESIGHT                 = ( 0.0 0.0 +1.0 )
+         INS-915230_FOV_CLASS_SPEC            = 'ANGLES'
+         INS-915230_FOV_REF_VECTOR            = ( +1.0 0.0 0.0 )
+         INS-915230_FOV_REF_ANGLE             = ( 5.3833 )
+         INS-915230_FOV_CROSS_ANGLE           = ( 54 )
+         INS-915230_FOV_ANGLE_UNITS           = 'DEGREES'
+
+      \begintext
+Platform ID
+---------------------------------------------------------------------------
+
+   This number is the NAIF instrument ID of the platform on which the
+   camera is mounted.
+
+      \begindata
+
+      INS-915230_PLATFORM_ID  = ( -915000 )
+
+      \begintext
+

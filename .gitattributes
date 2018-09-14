@@ -1,0 +1,4 @@
+*.BSP filter=lfs diff=lfs merge=lfs -text
+*.BC filter=lfs diff=lfs merge=lfs -text
+*.bsp filter=lfs diff=lfs merge=lfs -text
+*.bc filter=lfs diff=lfs merge=lfs -text

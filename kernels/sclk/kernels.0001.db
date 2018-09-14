@@ -1,0 +1,6 @@
+Object = SpacecraftClock
+  Group = Selection
+    File = ("apollo15", "kernels/sclk/apollo15.0001.tsc")
+  EndGroup
+EndObject
+
